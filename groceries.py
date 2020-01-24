@@ -25,14 +25,14 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
-print(products)
+#print(products)
 # pprint(products)
 
 #PRODUCTS (PART 1)
 
 products_count= len(products)
 
-print (type(products))
+#print (type(products))
 print("--------------")
 print("THERE ARE " + str(products_count) + " PRODUCTS:")
 print("--------------")
@@ -77,8 +77,9 @@ for d in unique_departments:
         label = "product"
     print(" + " + d.title() + " (" + str(matching_products_count) + " " + label+ ")")
 
-# TODO: write some Python code here to produce the desired output
 
+
+# TODO: write some Python code here to produce the desired output
 #   --------------
 #   THERE ARE 20 PRODUCTS:
 #   --------------
