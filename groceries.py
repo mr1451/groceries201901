@@ -28,32 +28,46 @@ products = [
 print(products)
 # pprint(products)
 
+#PRODUCTS (PART 1)
+
 products_count= len(products)
 
 #print (type(products))
 
-print("--------------")
-print("THERE ARE " + str(products_count) + " PRODUCTS:")
-print("--------------")
+#print("--------------")
+#print("THERE ARE " + str(products_count) + " PRODUCTS:")
+#print("--------------")
 
 def sort_by_name(any_product):
     return any_product["name"]
 
 sorted_products = sorted(products, key=sort_by_name)
 
-#   {
-#       "id":1, "name": 
-#       "Chocolate Sandwich Cookies", 
-#       "department": "snacks", 
-#       "aisle": "cookies cakes", 
-#       "price": 3.50
-#   }
+#for p in sorted_products:
+#    #print(p["name"]
+#    #price_usd =  # p["price"] #"$4.00"
+#    price_usd = "${0:.2f}".format(p["price"])
+#    print(" ... " + p["name"] + " (" + str(price_usd) + ")")
+#
+#DEPARTMENTS (PART 2)
 
-for p in sorted_products:
-    #print(p["name"]
-    #price_usd =  # p["price"] #"$4.00"
-    price_usd = "${0:.2f}".format(p["price"])
-    print(" ... " + p["name"] + " (" + str(price_usd) + ")")
+departments= []
+
+
+for p in products:
+    #print(p["department"])
+    #departments.append(p["department"])
+    if p["department"] not in departments:
+        departments.append(p["department"])
+        
+department_count= len(departments)
+
+print("--------------")
+print("THERE ARE " + str(department_count) + " DEPARTMENTS:")
+print("--------------")
+
+for d in departments:
+    print(d)
 
 # TODO: write some Python code here to produce the desired output
 
